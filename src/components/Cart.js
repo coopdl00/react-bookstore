@@ -14,11 +14,15 @@ class Cart extends Component {
   render() {
     return (
               <div className="container">
-                <h1>Cart (Check Out here)</h1>
-                <div className="list-group">
-                    {this.props.books? this.getItemsInCart().map(book=> <CartItem book={book} removeItemFromCart={this.props.removeItemFromCart}/> ) : ""}
-                  <div className="list-group-item .d-inline-block">
-                   {this.props.books && this.getItemsInCart().length > 0? `Total: $${ this.getTotal().toFixed(2)}` : `Add Items to your shopping cart by click the Add button next to the item you would like to purchase`}
+                <div className="row">
+                  <div className="col-md-4">
+                    <h1>Cart (Check Out here)</h1>
+                    <div className="list-group">
+                        {this.props.books? this.getItemsInCart().map(book=> <CartItem book={book} removeItemFromCart={this.props.removeItemFromCart}/> ) : ""}
+                      <div className="list-group-item .d-inline-block">
+                       {this.props.books && this.getItemsInCart().length > 0? `Total: $${ this.getTotal().toFixed(2)}` : `Add Items to your shopping cart by click the Add button next to the item you would like to purchase`}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

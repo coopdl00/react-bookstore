@@ -11,7 +11,7 @@ class Item extends Component {
             <div className="col-md-2"><p>{this.props.book.author}</p></div>
             <div className="col-md-2 .t"><a href={this.props.book.website}>{this.props.book.title}</a></div>
             <div className="col-md-2"><p>{`$${this.props.book.price.toFixed(2)}`}</p></div>
-            <div className="col-md-2"><button id={this.props.book.id} className="btn btn-success" onClick={this.props.addItemToCart}>Add to Cart</button></div>
+            <div className="col-md-1"><button id={this.props.book.id} className="btn btn-success" onClick={this.props.addItemToCart}>Add to Cart</button></div>
           </div>
         </div>
       )
