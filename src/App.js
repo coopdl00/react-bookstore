@@ -9,7 +9,7 @@ class App extends Component {
   state = {}
 
   componentDidMount = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/books`, {
+    const response = await fetch(`/api/books`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
