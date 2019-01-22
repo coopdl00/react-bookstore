@@ -9,7 +9,7 @@ class App extends Component {
   state = {}
 
   componentDidMount = async () => {
-    const response = await fetch(`/api/books`, {
+    const response = await fetch(`http://localhost:8082/api/books`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
